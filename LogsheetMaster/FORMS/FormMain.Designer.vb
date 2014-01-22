@@ -1045,12 +1045,12 @@ Partial Class FormMain
         'LinkLabelManu
         '
         Me.LinkLabelManu.AutoSize = True
-        Me.LinkLabelManu.Location = New System.Drawing.Point(260, 284)
+        Me.LinkLabelManu.Location = New System.Drawing.Point(219, 284)
         Me.LinkLabelManu.Name = "LinkLabelManu"
-        Me.LinkLabelManu.Size = New System.Drawing.Size(129, 16)
+        Me.LinkLabelManu.Size = New System.Drawing.Size(221, 16)
         Me.LinkLabelManu.TabIndex = 1
         Me.LinkLabelManu.TabStop = True
-        Me.LinkLabelManu.Text = "Emmanuel Schneiter"
+        Me.LinkLabelManu.Text = "Emmanuel Schneiter, Peter Williams"
         '
         'PictureBox2
         '
