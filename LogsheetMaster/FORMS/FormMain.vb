@@ -10,7 +10,7 @@ Public Class FormMain
     Dim FADFileslist As New ClassTripFileslist
 
     Dim TemplateFileslist As New ClassTemplateFilesList
-    Dim CommentsTemplateFileslist As New ClassTemplateFilesList
+    Dim LLTemplateFileslist As New ClassTemplateFilesList
     Dim FADTemplateFileslist As New ClassTemplateFilesList
     Dim AboutTabNumber As Integer
 
@@ -25,9 +25,10 @@ Public Class FormMain
         AboutTabNumber = 3
 
         ReadExistingTripFiles()
-        'ReadExistingCommentsFiles()
-        ReadTemplateFiles()
-        'ReadCommentsTemplateFiles()
+        ReadExistingFADFiles()
+        ReadTemplateFiles_PS()
+        ReadTemplateFiles_LL()
+        ReadFADTemplateFiles()
 
     End Sub
 
@@ -60,36 +61,36 @@ Public Class FormMain
         End Try
     End Sub
 
-    Public Sub ReadExistingCommentsFiles()
-        ' reads trip comments files in the 'trips_Comments' folder and adds to the existing trips comments list
-        Dim CommentsFilesPath As String
-        Dim CommentsFiles As String()
+    Public Sub ReadExistingFADFiles()
+        ' reads FAD files in the 'FAD_Reports' folder and adds to the existing FAD file list
+        Dim FADFilesPath As String
+        Dim FADFiles As String()
 
-        CommentsFileslist.Clear()
+        FADFileslist.Clear()
 
         Try
-            CommentsFilesPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\Trips_Comments"
+            FADFilesPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\FAD_Reports"
 
-            If Directory.Exists(CommentsFilesPath) Then
-                CommentsFiles = Directory.GetFiles(CommentsFilesPath)
+            If Directory.Exists(FADFilesPath) Then
+                FADFiles = Directory.GetFiles(FADFilesPath)
 
-                For Each CommentsFile In CommentsFiles
-                    If Path.GetExtension(CommentsFile) = ".pdf" Then
-                        CommentsFileslist.AddItem(CommentsFile)
+                For Each FADFile In FADFiles
+                    If Path.GetExtension(FADFile) = ".pdf" Then
+                        FADFileslist.AddItem(FADFile)
                     End If
                 Next
 
-                FillCommentsList()
+                FillFADList()
 
             Else
-                Directory.CreateDirectory(CommentsFilesPath)
+                Directory.CreateDirectory(FADFilesPath)
             End If
         Catch Ex As Exception
-            MessageBox.Show("There was an error reading the existing trip comments files :-\")
+            MessageBox.Show("There was an error reading the existing FAD files :-\")
         End Try
     End Sub
 
-    Public Sub ReadTemplateFiles()
+    Public Sub ReadTemplateFiles_PS()
         ' reads all template PDFs files in the 'template' folder and adds to the existing template combobox
         Dim templateFilesPath As String
         Dim templateFiles As String()
@@ -103,13 +104,11 @@ Public Class FormMain
                 templateFiles = Directory.GetFiles(templateFilesPath)
 
                 For Each tripFile In templateFiles
-                    If Path.GetExtension(tripFile) = ".pdf" Then
+                    If Path.GetExtension(tripFile) = ".pdf" And tripFile.Contains("PS_") Then
                         TemplateFileslist.AddItem(tripFile)
                     End If
                 Next
-
                 FillTemplateList()
-
             Else
                 Directory.CreateDirectory(templateFilesPath)
             End If
@@ -118,32 +117,57 @@ Public Class FormMain
         End Try
     End Sub
 
-    Public Sub ReadCommentsTemplateFiles()
+    Public Sub ReadTemplateFiles_LL()
         ' reads all template PDFs files in the 'template' folder and adds to the existing template combobox
-        Dim CommentstemplateFilesPath As String
-        Dim CommentstemplateFiles As String()
+        Dim templateFilesPath As String
+        Dim templateFiles As String()
 
-        CommentsTemplateFileslist.Clear()
+        LLTemplateFileslist.Clear()
 
         Try
-            CommentstemplateFilesPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\Template_Comments"
+            templateFilesPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\Template"
 
-            If Directory.Exists(CommentstemplateFilesPath) Then
-                CommentstemplateFiles = Directory.GetFiles(CommentstemplateFilesPath)
+            If Directory.Exists(templateFilesPath) Then
+                templateFiles = Directory.GetFiles(templateFilesPath)
 
-                For Each CommentsFile In CommentstemplateFiles
-                    If Path.GetExtension(CommentsFile) = ".pdf" Then
-                        CommentsTemplateFileslist.AddItem(CommentsFile)
+                For Each tripFile In templateFiles
+                    If Path.GetExtension(tripFile) = ".pdf" And tripFile.Contains("LL_") Then
+                        LLTemplateFileslist.AddItem(tripFile)
                     End If
                 Next
-
-                FillCommentsTemplateList()
-
+                FillLLTemplateList()
             Else
-                Directory.CreateDirectory(CommentstemplateFilesPath)
+                Directory.CreateDirectory(templateFilesPath)
             End If
         Catch Ex As Exception
-            MessageBox.Show("There was an error reading the existing trip comments template files :-\")
+            MessageBox.Show("There was an error reading the existing template files :-\")
+        End Try
+    End Sub
+
+    Public Sub ReadFADTemplateFiles()
+        ' reads all template PDFs files in the 'template' folder and adds to the existing template combobox
+        Dim FADtemplateFilesPath As String
+        Dim FADtemplateFiles As String()
+
+        FADTemplateFileslist.Clear()
+
+        Try
+            FADtemplateFilesPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\Template"
+
+            If Directory.Exists(FADtemplateFilesPath) Then
+                FADtemplateFiles = Directory.GetFiles(FADtemplateFilesPath)
+
+                For Each FADFile In FADtemplateFiles
+                    If Path.GetExtension(FADFile) = ".pdf" And FADFile.Contains("FAD_") Then
+                        FADTemplateFileslist.AddItem(FADFile)
+                    End If
+                Next
+                FillFADTemplateList()
+            Else
+                Directory.CreateDirectory(FADtemplateFilesPath)
+            End If
+        Catch Ex As Exception
+            MessageBox.Show("There was an error reading the existing template files :-\")
         End Try
     End Sub
 
@@ -152,16 +176,20 @@ Public Class FormMain
         TripFileslist.AddItemsToListBox(ListBoxTrips)
     End Sub
 
-    Public Sub FillCommentsList()
-        CommentsFileslist.AddItemsToListBox(ListBoxComments)
+    Public Sub FillFADList()
+        FADFileslist.AddItemsToListBox(ListBoxFAD)
     End Sub
 
     Public Sub FillTemplateList()
         TemplateFileslist.AddItemsToComboBox(ComboBoxTemplate)
     End Sub
 
-    Public Sub FillCommentsTemplateList()
-        CommentsTemplateFileslist.AddItemsToComboBox(ComboBoxCommentsTemplate)
+    Public Sub FillLLTemplateList()
+        LLTemplateFileslist.AddItemsToComboBox(ComboBoxLLTemplate)
+    End Sub
+
+    Public Sub FillFADTemplateList()
+        FADTemplateFileslist.AddItemsToComboBox(ComboBoxFADTemplate)
     End Sub
 
 
@@ -181,22 +209,42 @@ Public Class FormMain
 
     Private Sub ButtonNewTripFile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonNewTripFile.Click
         Dim strNewFilename As String, strNewPath As String, strTemplate As String
+        Dim StrGearType As String
+
+        If RadioSeiner.Checked = True Then
+            StrGearType = "PS"
+        ElseIf RadioLongliner.Checked = True Then
+            StrGearType = "LL"
+        Else
+            StrGearType = ""
+        End If
+
 
         ' Check that we have the basic parameters - trip date, vesselname, ffavid
         If TextBoxVesselname.TextLength = 0 Or TextBoxFFAVID.TextLength = 0 Then
-            MessageBox.Show("Please complete the parameters details before opening a new trip...")
+            MessageBox.Show("Please complete the VESSEL PARAMETERS before opening a new trip...")
             TabControl1.SelectTab(AboutTabNumber)
             TextBoxVesselname.Focus()
-        ElseIf ComboBoxTemplate.SelectedIndex < 0 Then
-            MessageBox.Show("Please select a logsheet template before creating a new trip...")
+        ElseIf RadioSeiner.Checked = False And RadioLongliner.Checked = False Then
+            MessageBox.Show("Please complete the VESSEL GEAR TYPE parameters before opening a new trip...")
+            TabControl1.SelectTab(AboutTabNumber)
+            RadioSeiner.Focus()
+        ElseIf ComboBoxTemplate.SelectedIndex < 0 And RadioSeiner.Checked = True Then
+            MessageBox.Show("Please select a PURSE SEINE LOGSHEET TEMPLATE before creating a new trip...")
             TabControl1.SelectTab(AboutTabNumber)
             ComboBoxTemplate.Focus()
+        ElseIf ComboBoxLLTemplate.SelectedIndex < 0 And RadioLongliner.Checked = True Then
+            MessageBox.Show("Please select a LONGLINE LOGSHEET TEMPLATE before creating a new trip...")
+            TabControl1.SelectTab(AboutTabNumber)
+            ComboBoxLLTemplate.Focus()
         Else
-            strNewFilename = TextBoxVesselname.Text.Trim + "_" + TextBoxFFAVID.Text.Trim + "_" + Format(DateTimePickerTripStartDate.Value, "yyyy-MM-dd") + ".pdf"
-
+            strNewFilename = TextBoxVesselname.Text.Trim + "_" + StrGearType + "_" + TextBoxFFAVID.Text.Trim + "_" + Format(DateTimePickerTripStartDate.Value, "yyyy-MM-dd") + ".pdf"
             strNewPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\trips\" + strNewFilename
-
-            strTemplate = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\template\" + ComboBoxTemplate.SelectedItem
+            If RadioSeiner.Checked = True Then
+                strTemplate = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\template\" + ComboBoxTemplate.SelectedItem
+            Else
+                strTemplate = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\template\" + ComboBoxLLTemplate.SelectedItem
+            End If
 
             If System.IO.File.Exists(strNewPath) Then
                 MessageBox.Show("A file with this name already exists...")
@@ -390,31 +438,31 @@ Public Class FormMain
     End Sub
 
 
-    Private Sub ButtonNewComments_Click(sender As Object, e As EventArgs) Handles ButtonNewComments.Click
+    Private Sub ButtonNewFAD_Click(sender As Object, e As EventArgs) Handles ButtonNewFAD.Click
         Dim strNewFilename As String, strNewPath As String, strTemplate As String
 
         ' Check that we have the basic parameters - trip date, vesselname, ffavid
         If TextBoxVesselname.TextLength = 0 Or TextBoxFFAVID.TextLength = 0 Then
-            MessageBox.Show("Please complete the parameters details before opening a new trip...")
+            MessageBox.Show("Please complete the parameters details before opening a new FAD form...")
             TabControl1.SelectTab(AboutTabNumber)
             TextBoxVesselname.Focus()
-        ElseIf ComboBoxCommentsTemplate.SelectedIndex < 0 Then
-            MessageBox.Show("Please select a logsheet Comments template before creating a new trip comments logsheet...")
+        ElseIf ComboBoxFADTemplate.SelectedIndex < 0 Then
+            MessageBox.Show("Please select a FAD template before creating a new trip comments logsheet...")
             TabControl1.SelectTab(AboutTabNumber)
-            ComboBoxCommentsTemplate.Focus()
+            ComboBoxFADTemplate.Focus()
         Else
-            strNewFilename = TextBoxVesselname.Text.Trim + "_" + TextBoxFFAVID.Text.Trim + "_" + Format(DateTimePickerTripStartDate.Value, "yyyy-MM-dd") + "_Comments.pdf"
+            strNewFilename = TextBoxVesselname.Text.Trim + "_" + TextBoxFFAVID.Text.Trim + "_" + Format(DateTimePickerTripStartDate.Value, "yyyy-MM-dd") + "_FAD.pdf"
 
-            strNewPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\trips_comments\" + strNewFilename
+            strNewPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\FAD_Reports\" + strNewFilename
 
-            strTemplate = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\template_Comments\" + ComboBoxCommentsTemplate.SelectedItem
+            strTemplate = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\Template_FAD\" + ComboBoxFADTemplate.SelectedItem
 
             If System.IO.File.Exists(strNewPath) Then
                 MessageBox.Show("A file with this name already exists...")
             ElseIf Not System.IO.File.Exists(strTemplate) Then
-                MessageBox.Show("The logsheet comments template file could not be found in the template_comments folder")
+                MessageBox.Show("The FAD template file could not be found in the TEMPLATE_FAD folder")
             Else
-                If MessageBox.Show("Do you want to create " + strNewFilename + " ?", "TRIP COMMENTS CREATION", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                If MessageBox.Show("Do you want to create " + strNewFilename + " ?", "NEW FAD REPORT", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                     System.IO.File.Copy(strTemplate, strNewPath)
                     System.IO.File.SetAttributes(strNewPath, FileAttribute.Normal)
 
@@ -424,50 +472,49 @@ Public Class FormMain
                     Catch ex As Exception
                         MessageBox.Show("There was an error opening the file :-\")
                     End Try
-                    ReadExistingCommentsFiles()
+                    ReadExistingFADFiles()
                 End If
             End If
         End If
 
     End Sub
 
-    Private Sub ButtonOpenComments_Click(sender As Object, e As EventArgs) Handles ButtonOpenComments.Click
-        If ListBoxComments.SelectedIndex < 0 Then
-            MessageBox.Show("Please select a trip comments logsheet first...")
+    Private Sub ButtonOpenFAD_Click(sender As Object, e As EventArgs) Handles ButtonOpenFAD.Click
+        If ListBoxFAD.SelectedIndex < 0 Then
+            MessageBox.Show("Please select a FAD report first...")
         Else
             'MessageBox.Show("You are opening " + CommentsFileslist.Item(ListBoxComments.SelectedIndex).FullPath)
             Try
-                System.Diagnostics.Process.Start(CommentsFileslist.Item(ListBoxComments.SelectedIndex).FullPath)
+                System.Diagnostics.Process.Start(FADFileslist.Item(ListBoxFAD.SelectedIndex).FullPath)
             Catch ex As Exception
                 MessageBox.Show("There was an error opening the file :-\")
             End Try
         End If
+
     End Sub
 
-    Private Sub ButtonDeleteComments_Click(sender As Object, e As EventArgs) Handles ButtonDeleteComments.Click
-        If ListBoxComments.SelectedIndex < 0 Then
-            MessageBox.Show("Please select a trip comments logsheet to DELETE first...")
+    Private Sub ButtonDeleteFAD_Click(sender As Object, e As EventArgs) Handles ButtonDeleteFAD.Click
+        If ListBoxFAD.SelectedIndex < 0 Then
+            MessageBox.Show("Please select a FAD report to DELETE first...")
         Else
-            'MessageBox.Show("You are deleting " + CommentsFileslist.Item(ListBoxComments.SelectedIndex).FullPath)
+            'MessageBox.Show("You are deleting " + FADFileslist.Item(ListBoxFAD.SelectedIndex).FullPath)
             Try
-                If MessageBox.Show("Do you want to DELETE trip comments logsheet '" + ListBoxTrips.SelectedItem + "' ?", "TRIP DELETION", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                    System.IO.File.Delete(CommentsFileslist.Item(ListBoxComments.SelectedIndex).FullPath)
-                    ReadExistingCommentsFiles()
+                If MessageBox.Show("Do you want to DELETE FAD report '" + ListBoxFAD.SelectedItem + "' ?", "DELETE FAD REPORT", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                    System.IO.File.Delete(FADFileslist.Item(ListBoxFAD.SelectedIndex).FullPath)
+                    ReadExistingFADFiles()
                 End If
             Catch ex As Exception
-                MessageBox.Show("There was an error deleting the comments file :-\")
+                MessageBox.Show("There was an error deleting the FAD report file :-\")
             End Try
         End If
-
-
     End Sub
 
-    Private Sub ListBoxComments_DoubleClick(sender As Object, e As EventArgs) Handles ListBoxComments.DoubleClick
-        If ListBoxComments.SelectedIndex >= 0 Then
+    Private Sub ListBoxFAD_DoubleClick(sender As Object, e As EventArgs) Handles ListBoxFAD.DoubleClick
+        If ListBoxFAD.SelectedIndex >= 0 Then
             Try
-                System.Diagnostics.Process.Start(CommentsFileslist.Item(ListBoxComments.SelectedIndex).FullPath)
+                System.Diagnostics.Process.Start(FADFileslist.Item(ListBoxFAD.SelectedIndex).FullPath)
             Catch ex As Exception
-                MessageBox.Show("There was an error opening the comments file :-\")
+                MessageBox.Show("There was an error opening the FAD report file :-\")
             End Try
         End If
 
@@ -500,7 +547,40 @@ Public Class FormMain
                 MessageBox.Show("There was an error opening the template file :-\")
             End Try
         End If
+    End Sub
+
+    Private Sub FadEdit_Click(sender As Object, e As EventArgs) Handles FadEdit.Click
+        If ComboBoxFADTemplate.SelectedIndex < 0 Then
+            MessageBox.Show("Please select a FAD template first...")
+        Else
+            Try
+                MessageBox.Show("YOU ARE EDITING THE MAIN FAD TEMPLATE" + Chr(13) + Chr(13) + "Please fill in the VESSEL name and FFAVID (if any) in order to keep these parameters filled for each new FAD report" + Chr(13) + Chr(13) + "When finished, save and close the template." + Chr(13) + Chr(13) + "(DO NOT ENTER ANY FAD DATA INTO THIS TEMPLATE)", "FAD Template EDIT", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                System.Diagnostics.Process.Start(FADTemplateFileslist.Item(ComboBoxFADTemplate.SelectedIndex).FullPath)
+            Catch ex As Exception
+                MessageBox.Show("There was an error opening the FAD template file :-\")
+            End Try
+        End If
 
     End Sub
 
+   
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        TabControl1.SelectTab(AboutTabNumber)
+        TextBoxVesselname.Focus()
+        FirstSteps.Show()
+    End Sub
+
+  
+    Private Sub LogLLEdit_Click(sender As Object, e As EventArgs) Handles LogLLEdit.Click
+        If ComboBoxLLTemplate.SelectedIndex < 0 Then
+            MessageBox.Show("Please select a Longline template first...")
+        Else
+            Try
+                MessageBox.Show("YOU ARE EDITING THE MAIN LONGLINE LOGSHEET TEMPLATE" + Chr(13) + Chr(13) + "Please fill in the main header details (first page), those you would like to be kept for each new trip:" + Chr(13) + Chr(13) + " - vessel," + Chr(13) + " - registration," + Chr(13) + " - FFAVid," + Chr(13) + " - WCPFCId," + Chr(13) + " - Company," + Chr(13) + " - IRC" + Chr(13) + Chr(13) + "When finished, save and close the template." + Chr(13) + Chr(13) + "(DO NOT ENTER ANY TRIP DATA INTO THIS TEMPLATE)", "Template EDIT", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                System.Diagnostics.Process.Start(LLTemplateFileslist.Item(ComboBoxLLTemplate.SelectedIndex).FullPath)
+            Catch ex As Exception
+                MessageBox.Show("There was an error opening the template file :-\")
+            End Try
+        End If
+    End Sub
 End Class

@@ -26,6 +26,8 @@ Partial Class FormMain
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -62,18 +64,24 @@ Partial Class FormMain
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.ButtonDeleteFAD = New System.Windows.Forms.Button()
-        Me.ListBoxFADs = New System.Windows.Forms.ListBox()
+        Me.ListBoxFAD = New System.Windows.Forms.ListBox()
         Me.ButtonOpenFAD = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.LogLLEdit = New System.Windows.Forms.Button()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.ComboBoxLLTemplate = New System.Windows.Forms.ComboBox()
+        Me.FadEdit = New System.Windows.Forms.Button()
         Me.LogEdit = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.ComboBoxFADTemplate = New System.Windows.Forms.ComboBox()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.ComboBoxCommentsTemplate = New System.Windows.Forms.ComboBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.ComboBoxTemplate = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.RadioLongliner = New System.Windows.Forms.RadioButton()
+        Me.RadioSeiner = New System.Windows.Forms.RadioButton()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBoxCompanyEmail = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -114,6 +122,7 @@ Partial Class FormMain
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -130,6 +139,7 @@ Partial Class FormMain
         Me.TabPage2.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,6 +181,8 @@ Partial Class FormMain
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.PictureBox6)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label13)
@@ -181,11 +193,31 @@ Partial Class FormMain
         Me.Panel1.Size = New System.Drawing.Size(682, 444)
         Me.Panel1.TabIndex = 0
         '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(186, 387)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(321, 34)
+        Me.Button4.TabIndex = 12
+        Me.Button4.Text = "New to eTUNALOG ? Follow the first steps..."
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.eTunaLog.My.Resources.Resources.LL_logsheet
+        Me.PictureBox6.Location = New System.Drawing.Point(370, 106)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(294, 212)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 11
+        Me.PictureBox6.TabStop = False
+        '
         'PictureBox3
         '
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(200, 6)
+        Me.PictureBox3.Location = New System.Drawing.Point(195, 18)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(37, 46)
         Me.PictureBox3.TabIndex = 10
@@ -195,17 +227,17 @@ Partial Class FormMain
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(302, 54)
+        Me.Label14.Location = New System.Drawing.Point(302, 61)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(57, 22)
+        Me.Label14.Size = New System.Drawing.Size(46, 22)
         Me.Label14.TabIndex = 9
-        Me.Label14.Text = "v1.03"
+        Me.Label14.Text = "v1.2"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Candara", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(234, -3)
+        Me.Label13.Location = New System.Drawing.Point(229, 9)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(225, 59)
         Me.Label13.TabIndex = 8
@@ -215,18 +247,18 @@ Partial Class FormMain
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(14, 394)
+        Me.Label12.Location = New System.Drawing.Point(89, 340)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(652, 27)
+        Me.Label12.Size = New System.Drawing.Size(514, 27)
         Me.Label12.TabIndex = 7
-        Me.Label12.Text = "SPC Purse Seine Electronic Logsheet Management System"
+        Me.Label12.Text = "SPC Electronic Logsheet Management System"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(71, 84)
+        Me.PictureBox1.Location = New System.Drawing.Point(17, 106)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(533, 298)
+        Me.PictureBox1.Size = New System.Drawing.Size(331, 212)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
@@ -535,7 +567,6 @@ Partial Class FormMain
         'DateTimePicker1
         '
         Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.eTunaLog.My.MySettings.Default, "DateTrip", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.DateTimePicker1.Enabled = False
         Me.DateTimePicker1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker1.Location = New System.Drawing.Point(198, 38)
@@ -548,7 +579,6 @@ Partial Class FormMain
         '
         'ButtonNewFAD
         '
-        Me.ButtonNewFAD.Enabled = False
         Me.ButtonNewFAD.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonNewFAD.Location = New System.Drawing.Point(17, 31)
         Me.ButtonNewFAD.Name = "ButtonNewFAD"
@@ -563,7 +593,7 @@ Partial Class FormMain
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel6.Controls.Add(Me.PictureBox5)
         Me.Panel6.Controls.Add(Me.ButtonDeleteFAD)
-        Me.Panel6.Controls.Add(Me.ListBoxFADs)
+        Me.Panel6.Controls.Add(Me.ListBoxFAD)
         Me.Panel6.Controls.Add(Me.ButtonOpenFAD)
         Me.Panel6.Location = New System.Drawing.Point(24, 147)
         Me.Panel6.Name = "Panel6"
@@ -573,15 +603,15 @@ Partial Class FormMain
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.eTunaLog.My.Resources.Resources.workinprogress
-        Me.PictureBox5.Location = New System.Drawing.Point(198, 37)
+        Me.PictureBox5.Location = New System.Drawing.Point(17, 166)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(222, 173)
+        Me.PictureBox5.Size = New System.Drawing.Size(143, 113)
         Me.PictureBox5.TabIndex = 11
         Me.PictureBox5.TabStop = False
+        Me.PictureBox5.Visible = False
         '
         'ButtonDeleteFAD
         '
-        Me.ButtonDeleteFAD.Enabled = False
         Me.ButtonDeleteFAD.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonDeleteFAD.ForeColor = System.Drawing.Color.Red
         Me.ButtonDeleteFAD.Location = New System.Drawing.Point(17, 69)
@@ -591,22 +621,20 @@ Partial Class FormMain
         Me.ButtonDeleteFAD.Text = "Delete"
         Me.ButtonDeleteFAD.UseVisualStyleBackColor = True
         '
-        'ListBoxFADs
+        'ListBoxFAD
         '
-        Me.ListBoxFADs.BackColor = System.Drawing.SystemColors.Window
-        Me.ListBoxFADs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ListBoxFADs.Enabled = False
-        Me.ListBoxFADs.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBoxFADs.FormattingEnabled = True
-        Me.ListBoxFADs.ItemHeight = 16
-        Me.ListBoxFADs.Location = New System.Drawing.Point(186, 20)
-        Me.ListBoxFADs.Name = "ListBoxFADs"
-        Me.ListBoxFADs.Size = New System.Drawing.Size(465, 274)
-        Me.ListBoxFADs.TabIndex = 8
+        Me.ListBoxFAD.BackColor = System.Drawing.SystemColors.Window
+        Me.ListBoxFAD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ListBoxFAD.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBoxFAD.FormattingEnabled = True
+        Me.ListBoxFAD.ItemHeight = 16
+        Me.ListBoxFAD.Location = New System.Drawing.Point(186, 20)
+        Me.ListBoxFAD.Name = "ListBoxFAD"
+        Me.ListBoxFAD.Size = New System.Drawing.Size(465, 274)
+        Me.ListBoxFAD.TabIndex = 8
         '
         'ButtonOpenFAD
         '
-        Me.ButtonOpenFAD.Enabled = False
         Me.ButtonOpenFAD.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonOpenFAD.Location = New System.Drawing.Point(17, 24)
         Me.ButtonOpenFAD.Name = "ButtonOpenFAD"
@@ -630,24 +658,64 @@ Partial Class FormMain
         'GroupBox6
         '
         Me.GroupBox6.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox6.Controls.Add(Me.LogLLEdit)
+        Me.GroupBox6.Controls.Add(Me.Label23)
+        Me.GroupBox6.Controls.Add(Me.ComboBoxLLTemplate)
+        Me.GroupBox6.Controls.Add(Me.FadEdit)
         Me.GroupBox6.Controls.Add(Me.LogEdit)
         Me.GroupBox6.Controls.Add(Me.Label24)
         Me.GroupBox6.Controls.Add(Me.ComboBoxFADTemplate)
-        Me.GroupBox6.Controls.Add(Me.Label23)
-        Me.GroupBox6.Controls.Add(Me.ComboBoxCommentsTemplate)
         Me.GroupBox6.Controls.Add(Me.Label19)
         Me.GroupBox6.Controls.Add(Me.ComboBoxTemplate)
         Me.GroupBox6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox6.Location = New System.Drawing.Point(25, 296)
+        Me.GroupBox6.Location = New System.Drawing.Point(25, 310)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(666, 147)
         Me.GroupBox6.TabIndex = 9
         Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Logsheet template"
+        Me.GroupBox6.Text = "Smart PDF templates"
+        '
+        'LogLLEdit
+        '
+        Me.LogLLEdit.Location = New System.Drawing.Point(599, 68)
+        Me.LogLLEdit.Name = "LogLLEdit"
+        Me.LogLLEdit.Size = New System.Drawing.Size(43, 23)
+        Me.LogLLEdit.TabIndex = 19
+        Me.LogLLEdit.Text = "Edit"
+        Me.LogLLEdit.UseVisualStyleBackColor = True
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(17, 71)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(179, 16)
+        Me.Label23.TabIndex = 17
+        Me.Label23.Text = "LONGLINE logsheet template"
+        '
+        'ComboBoxLLTemplate
+        '
+        Me.ComboBoxLLTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "LLTemplate", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.ComboBoxLLTemplate.FormattingEnabled = True
+        Me.ComboBoxLLTemplate.Location = New System.Drawing.Point(233, 68)
+        Me.ComboBoxLLTemplate.Name = "ComboBoxLLTemplate"
+        Me.ComboBoxLLTemplate.Size = New System.Drawing.Size(358, 24)
+        Me.ComboBoxLLTemplate.TabIndex = 18
+        Me.ComboBoxLLTemplate.Text = Global.eTunaLog.My.MySettings.Default.LLTemplate
+        '
+        'FadEdit
+        '
+        Me.FadEdit.Location = New System.Drawing.Point(599, 98)
+        Me.FadEdit.Name = "FadEdit"
+        Me.FadEdit.Size = New System.Drawing.Size(43, 23)
+        Me.FadEdit.TabIndex = 16
+        Me.FadEdit.Text = "Edit"
+        Me.FadEdit.UseVisualStyleBackColor = True
         '
         'LogEdit
         '
-        Me.LogEdit.Location = New System.Drawing.Point(612, 38)
+        Me.LogEdit.Location = New System.Drawing.Point(599, 38)
         Me.LogEdit.Name = "LogEdit"
         Me.LogEdit.Size = New System.Drawing.Size(43, 23)
         Me.LogEdit.TabIndex = 15
@@ -658,44 +726,21 @@ Partial Class FormMain
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(17, 83)
+        Me.Label24.Location = New System.Drawing.Point(17, 101)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(192, 16)
+        Me.Label24.Size = New System.Drawing.Size(139, 16)
         Me.Label24.TabIndex = 13
-        Me.Label24.Text = "FAD Records logsheet template"
+        Me.Label24.Text = "FAD Records template"
         '
         'ComboBoxFADTemplate
         '
         Me.ComboBoxFADTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "FADTemplate", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.ComboBoxFADTemplate.Enabled = False
         Me.ComboBoxFADTemplate.FormattingEnabled = True
-        Me.ComboBoxFADTemplate.Location = New System.Drawing.Point(276, 80)
+        Me.ComboBoxFADTemplate.Location = New System.Drawing.Point(233, 98)
         Me.ComboBoxFADTemplate.Name = "ComboBoxFADTemplate"
-        Me.ComboBoxFADTemplate.Size = New System.Drawing.Size(326, 24)
+        Me.ComboBoxFADTemplate.Size = New System.Drawing.Size(358, 24)
         Me.ComboBoxFADTemplate.TabIndex = 14
         Me.ComboBoxFADTemplate.Text = Global.eTunaLog.My.MySettings.Default.FADTemplate
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(17, 121)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(253, 16)
-        Me.Label23.TabIndex = 11
-        Me.Label23.Text = "Purse Seine logsheet Comments template"
-        Me.Label23.Visible = False
-        '
-        'ComboBoxCommentsTemplate
-        '
-        Me.ComboBoxCommentsTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "CommentsTemplate", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.ComboBoxCommentsTemplate.FormattingEnabled = True
-        Me.ComboBoxCommentsTemplate.Location = New System.Drawing.Point(276, 118)
-        Me.ComboBoxCommentsTemplate.Name = "ComboBoxCommentsTemplate"
-        Me.ComboBoxCommentsTemplate.Size = New System.Drawing.Size(326, 24)
-        Me.ComboBoxCommentsTemplate.TabIndex = 12
-        Me.ComboBoxCommentsTemplate.Text = Global.eTunaLog.My.MySettings.Default.CommentsTemplate
-        Me.ComboBoxCommentsTemplate.Visible = False
         '
         'Label19
         '
@@ -703,23 +748,25 @@ Partial Class FormMain
         Me.Label19.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(17, 41)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(186, 16)
+        Me.Label19.Size = New System.Drawing.Size(203, 16)
         Me.Label19.TabIndex = 6
-        Me.Label19.Text = "Purse Seine logsheet template"
+        Me.Label19.Text = "PURSE SEINE logsheet template"
         '
         'ComboBoxTemplate
         '
         Me.ComboBoxTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "Template", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.ComboBoxTemplate.FormattingEnabled = True
-        Me.ComboBoxTemplate.Location = New System.Drawing.Point(276, 38)
+        Me.ComboBoxTemplate.Location = New System.Drawing.Point(233, 38)
         Me.ComboBoxTemplate.Name = "ComboBoxTemplate"
-        Me.ComboBoxTemplate.Size = New System.Drawing.Size(326, 24)
+        Me.ComboBoxTemplate.Size = New System.Drawing.Size(358, 24)
         Me.ComboBoxTemplate.TabIndex = 10
         Me.ComboBoxTemplate.Text = Global.eTunaLog.My.MySettings.Default.Template
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.Label26)
         Me.GroupBox1.Controls.Add(Me.Label21)
         Me.GroupBox1.Controls.Add(Me.TextBoxCompanyEmail)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -745,15 +792,63 @@ Partial Class FormMain
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(25, 20)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(667, 247)
+        Me.GroupBox1.Size = New System.Drawing.Size(667, 270)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Vessel parameters"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.RadioLongliner)
+        Me.GroupBox2.Controls.Add(Me.RadioSeiner)
+        Me.GroupBox2.Location = New System.Drawing.Point(327, 16)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(308, 54)
+        Me.GroupBox2.TabIndex = 26
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Vessel gear type (*)"
+        '
+        'RadioLongliner
+        '
+        Me.RadioLongliner.AutoSize = True
+        Me.RadioLongliner.Checked = Global.eTunaLog.My.MySettings.Default.GearLL
+        Me.RadioLongliner.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.eTunaLog.My.MySettings.Default, "GearLL", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.RadioLongliner.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioLongliner.Location = New System.Drawing.Point(151, 24)
+        Me.RadioLongliner.Name = "RadioLongliner"
+        Me.RadioLongliner.Size = New System.Drawing.Size(78, 20)
+        Me.RadioLongliner.TabIndex = 25
+        Me.RadioLongliner.Text = "Longliner"
+        Me.RadioLongliner.UseVisualStyleBackColor = True
+        '
+        'RadioSeiner
+        '
+        Me.RadioSeiner.AutoSize = True
+        Me.RadioSeiner.Checked = Global.eTunaLog.My.MySettings.Default.GearPS
+        Me.RadioSeiner.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.eTunaLog.My.MySettings.Default, "GearPS", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.RadioSeiner.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioSeiner.Location = New System.Drawing.Point(33, 24)
+        Me.RadioSeiner.Name = "RadioSeiner"
+        Me.RadioSeiner.Size = New System.Drawing.Size(101, 20)
+        Me.RadioSeiner.TabIndex = 23
+        Me.RadioSeiner.Text = "Purse Seiner"
+        Me.RadioSeiner.UseVisualStyleBackColor = True
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(142, 239)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(317, 16)
+        Me.Label26.TabIndex = 22
+        Me.Label26.Text = "(*) Parameter is compulsory (used in file naming)"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label21.Location = New System.Drawing.Point(324, 182)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(191, 16)
@@ -773,11 +868,12 @@ Partial Class FormMain
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label9.Location = New System.Drawing.Point(239, 182)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(29, 16)
+        Me.Label9.Size = New System.Drawing.Size(60, 16)
         Me.Label9.TabIndex = 19
-        Me.Label9.Text = "IRC"
+        Me.Label9.Text = "I.R.CALL"
         '
         'TextBoxIRC
         '
@@ -792,6 +888,7 @@ Partial Class FormMain
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label10.Location = New System.Drawing.Point(16, 182)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(97, 16)
@@ -811,6 +908,7 @@ Partial Class FormMain
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label8.Location = New System.Drawing.Point(239, 131)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(72, 16)
@@ -830,6 +928,7 @@ Partial Class FormMain
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label7.Location = New System.Drawing.Point(16, 132)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(126, 16)
@@ -849,6 +948,7 @@ Partial Class FormMain
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label6.Location = New System.Drawing.Point(324, 80)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(42, 16)
@@ -860,7 +960,7 @@ Partial Class FormMain
         Me.TextBoxAgent.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "Agent", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.TextBoxAgent.Location = New System.Drawing.Point(327, 99)
         Me.TextBoxAgent.Name = "TextBoxAgent"
-        Me.TextBoxAgent.Size = New System.Drawing.Size(313, 22)
+        Me.TextBoxAgent.Size = New System.Drawing.Size(172, 22)
         Me.TextBoxAgent.TabIndex = 4
         Me.TextBoxAgent.Text = Global.eTunaLog.My.MySettings.Default.Agent
         '
@@ -868,6 +968,7 @@ Partial Class FormMain
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label5.Location = New System.Drawing.Point(17, 80)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(109, 16)
@@ -887,7 +988,8 @@ Partial Class FormMain
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(324, 29)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label4.Location = New System.Drawing.Point(515, 80)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(95, 16)
         Me.Label4.TabIndex = 7
@@ -896,9 +998,9 @@ Partial Class FormMain
         'TextBoxPermit
         '
         Me.TextBoxPermit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "Permit", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.TextBoxPermit.Location = New System.Drawing.Point(327, 48)
+        Me.TextBoxPermit.Location = New System.Drawing.Point(518, 99)
         Me.TextBoxPermit.Name = "TextBoxPermit"
-        Me.TextBoxPermit.Size = New System.Drawing.Size(313, 22)
+        Me.TextBoxPermit.Size = New System.Drawing.Size(122, 22)
         Me.TextBoxPermit.TabIndex = 1
         Me.TextBoxPermit.Text = Global.eTunaLog.My.MySettings.Default.Permit
         '
@@ -906,6 +1008,7 @@ Partial Class FormMain
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label3.Location = New System.Drawing.Point(324, 131)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(97, 16)
@@ -915,22 +1018,22 @@ Partial Class FormMain
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(239, 80)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 16)
+        Me.Label2.Size = New System.Drawing.Size(75, 16)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "FFA VID"
+        Me.Label2.Text = "FFA VID (*)"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(17, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 16)
+        Me.Label1.Size = New System.Drawing.Size(105, 16)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Vessel name"
+        Me.Label1.Text = "Vessel name (*)"
         '
         'TextBoxCaptain
         '
@@ -1139,6 +1242,7 @@ Partial Class FormMain
         Me.TabPage3.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
@@ -1161,6 +1265,8 @@ Partial Class FormMain
         Me.GroupBox6.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -1237,13 +1343,11 @@ Partial Class FormMain
     Friend WithEvents ButtonNewFAD As System.Windows.Forms.Button
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents ButtonDeleteFAD As System.Windows.Forms.Button
-    Friend WithEvents ListBoxFADs As System.Windows.Forms.ListBox
+    Friend WithEvents ListBoxFAD As System.Windows.Forms.ListBox
     Friend WithEvents ButtonOpenFAD As System.Windows.Forms.Button
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents ComboBoxCommentsTemplate As System.Windows.Forms.ComboBox
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents ComboBoxFADTemplate As System.Windows.Forms.ComboBox
     Friend WithEvents TabPage7 As System.Windows.Forms.TabPage
@@ -1257,5 +1361,15 @@ Partial Class FormMain
     Friend WithEvents ButtonOpenComments As System.Windows.Forms.Button
     Friend WithEvents ButtonVersion As System.Windows.Forms.Button
     Friend WithEvents LogEdit As System.Windows.Forms.Button
+    Friend WithEvents FadEdit As System.Windows.Forms.Button
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents RadioSeiner As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioLongliner As System.Windows.Forms.RadioButton
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents LogLLEdit As System.Windows.Forms.Button
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents ComboBoxLLTemplate As System.Windows.Forms.ComboBox
+    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 
 End Class

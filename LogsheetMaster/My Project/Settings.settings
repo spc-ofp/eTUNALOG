@@ -46,7 +46,7 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Logsheet_XML_Import.accdb</Value>
     </Setting>
-    <Setting Name="CommentsTemplate" Type="System.String" Scope="User">
+    <Setting Name="LLTemplate" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="FADTemplate" Type="System.String" Scope="User">
@@ -54,6 +54,12 @@
     </Setting>
     <Setting Name="DateTrip" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">10/03/2013 15:33:24</Value>
+    </Setting>
+    <Setting Name="GearPS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GearLL" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>
