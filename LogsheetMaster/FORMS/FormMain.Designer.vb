@@ -174,7 +174,7 @@ Partial Class FormMain
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(724, 485)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Main"
+        Me.TabPage3.Text = "Home"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'Panel1
@@ -206,7 +206,7 @@ Partial Class FormMain
         'PictureBox6
         '
         Me.PictureBox6.Image = Global.eTunaLog.My.Resources.Resources.LL_logsheet
-        Me.PictureBox6.Location = New System.Drawing.Point(370, 106)
+        Me.PictureBox6.Location = New System.Drawing.Point(370, 93)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(294, 212)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -229,9 +229,9 @@ Partial Class FormMain
         Me.Label14.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(302, 61)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(46, 22)
+        Me.Label14.Size = New System.Drawing.Size(62, 22)
         Me.Label14.TabIndex = 9
-        Me.Label14.Text = "v1.2"
+        Me.Label14.Text = "v1.2.1"
         '
         'Label13
         '
@@ -247,7 +247,7 @@ Partial Class FormMain
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(89, 340)
+        Me.Label12.Location = New System.Drawing.Point(85, 319)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(514, 27)
         Me.Label12.TabIndex = 7
@@ -256,7 +256,7 @@ Partial Class FormMain
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(17, 106)
+        Me.PictureBox1.Location = New System.Drawing.Point(17, 93)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(331, 212)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -328,7 +328,7 @@ Partial Class FormMain
         Me.ButtonNewTripFile.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonNewTripFile.Location = New System.Drawing.Point(17, 31)
         Me.ButtonNewTripFile.Name = "ButtonNewTripFile"
-        Me.ButtonNewTripFile.Size = New System.Drawing.Size(136, 29)
+        Me.ButtonNewTripFile.Size = New System.Drawing.Size(136, 43)
         Me.ButtonNewTripFile.TabIndex = 6
         Me.ButtonNewTripFile.Text = "Create New Trip"
         Me.ButtonNewTripFile.UseVisualStyleBackColor = True
@@ -421,9 +421,9 @@ Partial Class FormMain
         'ButtonOpenTrip
         '
         Me.ButtonOpenTrip.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonOpenTrip.Location = New System.Drawing.Point(17, 24)
+        Me.ButtonOpenTrip.Location = New System.Drawing.Point(17, 20)
         Me.ButtonOpenTrip.Name = "ButtonOpenTrip"
-        Me.ButtonOpenTrip.Size = New System.Drawing.Size(136, 29)
+        Me.ButtonOpenTrip.Size = New System.Drawing.Size(136, 43)
         Me.ButtonOpenTrip.TabIndex = 9
         Me.ButtonOpenTrip.Text = "Open Existing Trip"
         Me.ButtonOpenTrip.UseVisualStyleBackColor = True
@@ -806,7 +806,7 @@ Partial Class FormMain
         Me.GroupBox2.Size = New System.Drawing.Size(308, 54)
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Vessel gear type (*)"
+        Me.GroupBox2.Text = "Vessel gear type"
         '
         'RadioLongliner
         '
@@ -814,7 +814,7 @@ Partial Class FormMain
         Me.RadioLongliner.Checked = Global.eTunaLog.My.MySettings.Default.GearLL
         Me.RadioLongliner.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.eTunaLog.My.MySettings.Default, "GearLL", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.RadioLongliner.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioLongliner.Location = New System.Drawing.Point(151, 24)
+        Me.RadioLongliner.Location = New System.Drawing.Point(170, 24)
         Me.RadioLongliner.Name = "RadioLongliner"
         Me.RadioLongliner.Size = New System.Drawing.Size(78, 20)
         Me.RadioLongliner.TabIndex = 25
@@ -827,7 +827,7 @@ Partial Class FormMain
         Me.RadioSeiner.Checked = Global.eTunaLog.My.MySettings.Default.GearPS
         Me.RadioSeiner.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.eTunaLog.My.MySettings.Default, "GearPS", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.RadioSeiner.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioSeiner.Location = New System.Drawing.Point(33, 24)
+        Me.RadioSeiner.Location = New System.Drawing.Point(7, 24)
         Me.RadioSeiner.Name = "RadioSeiner"
         Me.RadioSeiner.Size = New System.Drawing.Size(101, 20)
         Me.RadioSeiner.TabIndex = 23
@@ -838,7 +838,7 @@ Partial Class FormMain
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(142, 239)
+        Me.Label26.Location = New System.Drawing.Point(86, 239)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(317, 16)
         Me.Label26.TabIndex = 22
@@ -851,9 +851,9 @@ Partial Class FormMain
         Me.Label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label21.Location = New System.Drawing.Point(324, 182)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(191, 16)
+        Me.Label21.Size = New System.Drawing.Size(144, 16)
         Me.Label21.TabIndex = 20
-        Me.Label21.Text = "Fishing Company email contact"
+        Me.Label21.Text = "Fishing Company email"
         '
         'TextBoxCompanyEmail
         '
@@ -1031,9 +1031,9 @@ Partial Class FormMain
         Me.Label1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(17, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 16)
+        Me.Label1.Size = New System.Drawing.Size(101, 16)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Vessel name (*)"
+        Me.Label1.Text = "Vessel name(*)"
         '
         'TextBoxCaptain
         '
