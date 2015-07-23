@@ -18,9 +18,20 @@ Public Class FormMain
         'TODO: This line of code loads data into the 'Logsheet_XML_ImportDataSet.test' table. You can move, or remove it, as needed.
         'Me.TestTableAdapter.Fill(Me.Logsheet_XML_ImportDataSet.test)
 
-        ' temporarily removes the TESTING tab
-        TabControl1.Controls.Remove(TabControl1.TabPages(6))
-        TabControl1.Controls.Remove(TabControl1.TabPages(2))
+        CheckLanguage()
+        CheckFADTAB(False)
+        CheckLOGSHEETTAB(False)
+
+        ' temporarily removes the Testing TAB
+        TabControl1.Controls.Remove(TabControl1.TabPages(5))
+
+        ' removing TABs according to option settings
+        If CheckShowFAD.Checked = False Then
+            TabControl1.Controls.Remove(TabControl1.TabPages(2))
+        End If
+        If CheckShowLogsheet.Checked = False Then
+            TabControl1.Controls.Remove(TabControl1.TabPages(1))
+        End If
 
         AboutTabNumber = 3
 
@@ -238,7 +249,7 @@ Public Class FormMain
             TabControl1.SelectTab(AboutTabNumber)
             ComboBoxLLTemplate.Focus()
         Else
-            strNewFilename = TextBoxVesselname.Text.Trim + "_" + StrGearType + "_" + TextBoxFFAVID.Text.Trim + "_" + Format(DateTimePickerTripStartDate.Value, "yyyy-MM-dd") + ".pdf"
+            strNewFilename = TextBoxVesselname.Text.Trim + "_" + StrGearType + "_" + TextBoxFFAVID.Text.Trim + IIf(TripNumber.TextLength <> 0, "_" + Trim(TripNumber.Text), "") + "_" + Format(DateTimePickerTripStartDate.Value, "yyyy-MM-dd") + ".pdf"
             strNewPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\trips\" + strNewFilename
             If RadioSeiner.Checked = True Then
                 strTemplate = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\template\" + ComboBoxTemplate.SelectedItem
@@ -277,7 +288,7 @@ Public Class FormMain
         End If
     End Sub
    
-    Private Sub ComboBoxTemplate_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBoxTemplate.SelectedIndexChanged
+    Private Sub ComboBoxTemplate_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'MessageBox.Show(ComboBoxTemplate.SelectedItem)
     End Sub
 
@@ -302,7 +313,7 @@ Public Class FormMain
 
     End Sub
 
-    Private Sub TextBoxVesselname_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBoxVesselname.TextChanged
+    Private Sub TextBoxVesselname_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         TextBoxVesselname.Text.ToUpper()
         TextBoxVesselname.Refresh()
     End Sub
@@ -536,7 +547,7 @@ Public Class FormMain
 
     End Sub
 
-    Private Sub LogEdit_Click(sender As Object, e As EventArgs) Handles LogEdit.Click
+    Private Sub LogEdit_Click(sender As Object, e As EventArgs)
         If ComboBoxTemplate.SelectedIndex < 0 Then
             MessageBox.Show("Please select a template first...")
         Else
@@ -549,7 +560,7 @@ Public Class FormMain
         End If
     End Sub
 
-    Private Sub FadEdit_Click(sender As Object, e As EventArgs) Handles FadEdit.Click
+    Private Sub FadEdit_Click(sender As Object, e As EventArgs)
         If ComboBoxFADTemplate.SelectedIndex < 0 Then
             MessageBox.Show("Please select a FAD template first...")
         Else
@@ -564,14 +575,14 @@ Public Class FormMain
     End Sub
 
    
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub ButtonHelp_Click(sender As Object, e As EventArgs) Handles ButtonHelp.Click
         TabControl1.SelectTab(AboutTabNumber)
         TextBoxVesselname.Focus()
         FirstSteps.Show()
     End Sub
 
   
-    Private Sub LogLLEdit_Click(sender As Object, e As EventArgs) Handles LogLLEdit.Click
+    Private Sub LogLLEdit_Click(sender As Object, e As EventArgs)
         If ComboBoxLLTemplate.SelectedIndex < 0 Then
             MessageBox.Show("Please select a Longline template first...")
         Else
@@ -581,6 +592,88 @@ Public Class FormMain
             Catch ex As Exception
                 MessageBox.Show("There was an error opening the template file :-\")
             End Try
+        End If
+    End Sub
+
+    Private Sub CheckShowLogsheet_CheckedChanged(sender As Object, e As EventArgs) Handles CheckShowLogsheet.Click
+        CheckLOGSHEETTAB(True)
+    End Sub
+
+    Private Sub CheckShowFAD_CheckedChanged(sender As Object, e As EventArgs) Handles CheckShowFAD.Click
+        CheckFADTAB(True)
+    End Sub
+
+    Private Sub RadioFrench_click(sender As Object, e As EventArgs) Handles RadioFrench.Click
+        CheckLanguage()
+    End Sub
+
+    Private Sub RadioEnglish_click(sender As Object, e As EventArgs) Handles RadioEnglish.Click
+        If RadioEnglish.Checked = True Then
+            MessageBox.Show("English will show up at next eTUNALOG startup...")
+        End If
+    End Sub
+
+    Private Sub CheckFADTAB(FireMsg As Boolean)
+        ' removing TABs according to option settings
+        If CheckShowFAD.Checked = False Then
+            TabControl1.Controls.Remove(TabControl1.TabPages(2))
+        Else
+            If FireMsg = True Then
+                MessageBox.Show("Your FAD tab will appear on next eTUNALOG startup...")
+                CheckShowFAD.Enabled = False
+            End If
+        End If
+    End Sub
+
+    Private Sub CheckLOGSHEETTAB(FireMsg As Boolean)
+        ' removing TABs according to option settings
+        If CheckShowLogsheet.Checked = False Then
+            TabControl1.Controls.Remove(TabControl1.TabPages(1))
+        Else
+            If FireMsg = True Then
+                MessageBox.Show("Your LOGSHEET tab will appear on next eTUNALOG startup...")
+                CheckShowLogsheet.Enabled = False
+            End If
+        End If
+    End Sub
+
+    Private Sub CheckLanguage()
+        If RadioFrench.Checked = True Then
+            LabelTitle.Text = "Système de Gestion de Fiches de Pêche Electroniques"
+            LabelTitle.Location.X.Equals(5)
+            TabControl1.TabPages(1).Text = "Fiches de Pêche"
+            TabControl1.TabPages(2).Text = "Fiches DCP"
+            TabControl1.TabPages(3).Text = "Paramètres"
+            TabControl1.TabPages(4).Text = "A Propos d'eTUNALOG"
+            ButtonHelp.Text = "Nouveau sur eTUNALOG ? Suivez le guide.. (Anglais)"
+            ButtonNewTripFile.Text = "Nouveau Voyage"
+            ButtonOpenTrip.Text = "Ouvrir un voyage"
+            ButtonDelete.Text = "Effacer"
+            ButtonNewFAD.Text = "Nouvelle Fiche DCP"
+            ButtonOpenFAD.Text = "Ouvrir Fiche DCP"
+            ButtonDeleteFAD.Text = "Effacer"
+            Parameters.TabPages(0).Text = "Détails Navire"
+            Parameters.TabPages(1).Text = "Modèles PDF"
+            Parameters.TabPages(2).Text = "Options"
+            GroupBoxVessel.Text = "Paramètres Navire"
+            LabelVesselName.Text = "Nom du navire (*)"
+            GroupBoxGear.Text = "Type d'engin de pêche (*)"
+            RadioSeiner.Text = "Senneur"
+            RadioLongliner.Text = "Palangrier"
+            LabelCompany.Text = "Société de pêche"
+            LabelCountry.Text = "Pays"
+            LabelCapt.Text = "Nom du Capitaine mon capitaine"
+            LabelEmail.Text = "Email Société de Pêche"
+            LabelCompuls.Text = "(*) Paramètre obligatoire (utilisé pour nommer la fiche de pêche)"
+            LabelPS.Text = "Modèle Fiche SENNEUR"
+            LabelLL.Text = "Modèle Fiche PALANGRIER"
+            LabelFAD.Text = "Modèle Fiche DCP"
+            GroupShow.Text = "Voir"
+            CheckShowLogsheet.Text = "Fiches de Pêche"
+            CheckShowFAD.Text = "Fiches DCP"
+            GroupLanguage.Text = "Langage"
+            GroupBoxTemplates.Text = "Modèles Fiches PDF"
+            Me.Text = "Système de Gestion de Fiches de Pêche Electroniques"
         End If
     End Sub
 

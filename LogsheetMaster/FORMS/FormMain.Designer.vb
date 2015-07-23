@@ -26,17 +26,19 @@ Partial Class FormMain
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.ButtonHelp = New System.Windows.Forms.Button()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.LabelTitle = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.LabelTripNumber = New System.Windows.Forms.Label()
+        Me.TripNumber = New System.Windows.Forms.TextBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LabelTripStart = New System.Windows.Forms.Label()
         Me.DateTimePickerTripStartDate = New System.Windows.Forms.DateTimePicker()
         Me.ButtonNewTripFile = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -47,15 +49,6 @@ Partial Class FormMain
         Me.ButtonDelete = New System.Windows.Forms.Button()
         Me.ListBoxTrips = New System.Windows.Forms.ListBox()
         Me.ButtonOpenTrip = New System.Windows.Forms.Button()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.DateTimePickerTripStartDateComments = New System.Windows.Forms.DateTimePicker()
-        Me.ButtonNewComments = New System.Windows.Forms.Button()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.ButtonDeleteComments = New System.Windows.Forms.Button()
-        Me.ListBoxComments = New System.Windows.Forms.ListBox()
-        Me.ButtonOpenComments = New System.Windows.Forms.Button()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -67,22 +60,14 @@ Partial Class FormMain
         Me.ListBoxFAD = New System.Windows.Forms.ListBox()
         Me.ButtonOpenFAD = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.LogLLEdit = New System.Windows.Forms.Button()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.ComboBoxLLTemplate = New System.Windows.Forms.ComboBox()
-        Me.FadEdit = New System.Windows.Forms.Button()
-        Me.LogEdit = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.ComboBoxFADTemplate = New System.Windows.Forms.ComboBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.ComboBoxTemplate = New System.Windows.Forms.ComboBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Parameters = New System.Windows.Forms.TabControl()
+        Me.TabVessels = New System.Windows.Forms.TabPage()
+        Me.GroupBoxVessel = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxGear = New System.Windows.Forms.GroupBox()
         Me.RadioLongliner = New System.Windows.Forms.RadioButton()
         Me.RadioSeiner = New System.Windows.Forms.RadioButton()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.LabelCompuls = New System.Windows.Forms.Label()
+        Me.LabelEmail = New System.Windows.Forms.Label()
         Me.TextBoxCompanyEmail = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBoxIRC = New System.Windows.Forms.TextBox()
@@ -90,20 +75,38 @@ Partial Class FormMain
         Me.TextBoxRegistrationNo = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBoxWCPFCID = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.LabelCountry = New System.Windows.Forms.Label()
         Me.TextBoxCountry = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBoxAgent = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LabelCompany = New System.Windows.Forms.Label()
         Me.TextBoxCompany = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBoxPermit = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LabelCapt = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LabelVesselName = New System.Windows.Forms.Label()
         Me.TextBoxCaptain = New System.Windows.Forms.TextBox()
         Me.TextBoxFFAVID = New System.Windows.Forms.TextBox()
         Me.TextBoxVesselname = New System.Windows.Forms.TextBox()
+        Me.TabTemplates = New System.Windows.Forms.TabPage()
+        Me.GroupBoxTemplates = New System.Windows.Forms.GroupBox()
+        Me.LogLLEdit = New System.Windows.Forms.Button()
+        Me.LabelLL = New System.Windows.Forms.Label()
+        Me.ComboBoxLLTemplate = New System.Windows.Forms.ComboBox()
+        Me.FadEdit = New System.Windows.Forms.Button()
+        Me.LogEdit = New System.Windows.Forms.Button()
+        Me.LabelFAD = New System.Windows.Forms.Label()
+        Me.ComboBoxFADTemplate = New System.Windows.Forms.ComboBox()
+        Me.LabelPS = New System.Windows.Forms.Label()
+        Me.ComboBoxTemplate = New System.Windows.Forms.ComboBox()
+        Me.TabOptions = New System.Windows.Forms.TabPage()
+        Me.GroupLanguage = New System.Windows.Forms.GroupBox()
+        Me.RadioFrench = New System.Windows.Forms.RadioButton()
+        Me.RadioEnglish = New System.Windows.Forms.RadioButton()
+        Me.GroupShow = New System.Windows.Forms.GroupBox()
+        Me.CheckShowFAD = New System.Windows.Forms.CheckBox()
+        Me.CheckShowLogsheet = New System.Windows.Forms.CheckBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ButtonVersion = New System.Windows.Forms.Button()
@@ -129,17 +132,20 @@ Partial Class FormMain
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        Me.Panel8.SuspendLayout()
         Me.TabPage6.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.Parameters.SuspendLayout()
+        Me.TabVessels.SuspendLayout()
+        Me.GroupBoxVessel.SuspendLayout()
+        Me.GroupBoxGear.SuspendLayout()
+        Me.TabTemplates.SuspendLayout()
+        Me.GroupBoxTemplates.SuspendLayout()
+        Me.TabOptions.SuspendLayout()
+        Me.GroupLanguage.SuspendLayout()
+        Me.GroupShow.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -153,7 +159,6 @@ Partial Class FormMain
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage7)
         Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage4)
@@ -181,27 +186,27 @@ Partial Class FormMain
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.ButtonHelp)
         Me.Panel1.Controls.Add(Me.PictureBox6)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Controls.Add(Me.LabelTitle)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(22, 23)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(682, 444)
         Me.Panel1.TabIndex = 0
         '
-        'Button4
+        'ButtonHelp
         '
-        Me.Button4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(186, 387)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(321, 34)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "New to eTUNALOG ? Follow the first steps..."
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.ButtonHelp.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonHelp.Location = New System.Drawing.Point(172, 371)
+        Me.ButtonHelp.Name = "ButtonHelp"
+        Me.ButtonHelp.Size = New System.Drawing.Size(321, 47)
+        Me.ButtonHelp.TabIndex = 12
+        Me.ButtonHelp.Text = "New to eTUNALOG ? Follow the first steps..."
+        Me.ButtonHelp.UseVisualStyleBackColor = True
         '
         'PictureBox6
         '
@@ -217,7 +222,7 @@ Partial Class FormMain
         '
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(195, 18)
+        Me.PictureBox3.Location = New System.Drawing.Point(185, 18)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(37, 46)
         Me.PictureBox3.TabIndex = 10
@@ -227,31 +232,32 @@ Partial Class FormMain
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(302, 61)
+        Me.Label14.Location = New System.Drawing.Point(304, 63)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(62, 22)
+        Me.Label14.Size = New System.Drawing.Size(46, 22)
         Me.Label14.TabIndex = 9
-        Me.Label14.Text = "v1.2.1"
+        Me.Label14.Text = "v1.3"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Candara", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(229, 9)
+        Me.Label13.Location = New System.Drawing.Point(219, 9)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(225, 59)
+        Me.Label13.Size = New System.Drawing.Size(256, 59)
         Me.Label13.TabIndex = 8
-        Me.Label13.Text = "eTunaLog"
+        Me.Label13.Text = "eTUNALOG"
         '
-        'Label12
+        'LabelTitle
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(85, 319)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(514, 27)
-        Me.Label12.TabIndex = 7
-        Me.Label12.Text = "SPC Electronic Logsheet Management System"
+        Me.LabelTitle.AutoSize = True
+        Me.LabelTitle.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTitle.Location = New System.Drawing.Point(62, 326)
+        Me.LabelTitle.Name = "LabelTitle"
+        Me.LabelTitle.Size = New System.Drawing.Size(514, 27)
+        Me.LabelTitle.TabIndex = 7
+        Me.LabelTitle.Text = "SPC Electronic Logsheet Management System"
+        Me.LabelTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'PictureBox1
         '
@@ -279,14 +285,35 @@ Partial Class FormMain
         '
         Me.Panel4.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.LabelTripNumber)
+        Me.Panel4.Controls.Add(Me.TripNumber)
         Me.Panel4.Controls.Add(Me.PictureBox4)
-        Me.Panel4.Controls.Add(Me.Label11)
+        Me.Panel4.Controls.Add(Me.LabelTripStart)
         Me.Panel4.Controls.Add(Me.DateTimePickerTripStartDate)
         Me.Panel4.Controls.Add(Me.ButtonNewTripFile)
         Me.Panel4.Location = New System.Drawing.Point(24, 28)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(678, 94)
         Me.Panel4.TabIndex = 8
+        '
+        'LabelTripNumber
+        '
+        Me.LabelTripNumber.AutoSize = True
+        Me.LabelTripNumber.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTripNumber.Location = New System.Drawing.Point(314, 19)
+        Me.LabelTripNumber.Name = "LabelTripNumber"
+        Me.LabelTripNumber.Size = New System.Drawing.Size(78, 16)
+        Me.LabelTripNumber.TabIndex = 11
+        Me.LabelTripNumber.Text = "Trip Number"
+        '
+        'TripNumber
+        '
+        Me.TripNumber.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "TripNo", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.TripNumber.Location = New System.Drawing.Point(317, 38)
+        Me.TripNumber.Name = "TripNumber"
+        Me.TripNumber.Size = New System.Drawing.Size(65, 22)
+        Me.TripNumber.TabIndex = 10
+        Me.TripNumber.Text = Global.eTunaLog.My.MySettings.Default.TripNo
         '
         'PictureBox4
         '
@@ -299,15 +326,15 @@ Partial Class FormMain
         Me.PictureBox4.TabIndex = 9
         Me.PictureBox4.TabStop = False
         '
-        'Label11
+        'LabelTripStart
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(195, 19)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(92, 16)
-        Me.Label11.TabIndex = 8
-        Me.Label11.Text = "Trip Start Date"
+        Me.LabelTripStart.AutoSize = True
+        Me.LabelTripStart.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTripStart.Location = New System.Drawing.Point(195, 19)
+        Me.LabelTripStart.Name = "LabelTripStart"
+        Me.LabelTripStart.Size = New System.Drawing.Size(92, 16)
+        Me.LabelTripStart.TabIndex = 8
+        Me.LabelTripStart.Text = "Trip Start Date"
         '
         'DateTimePickerTripStartDate
         '
@@ -326,9 +353,9 @@ Partial Class FormMain
         'ButtonNewTripFile
         '
         Me.ButtonNewTripFile.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonNewTripFile.Location = New System.Drawing.Point(17, 31)
+        Me.ButtonNewTripFile.Location = New System.Drawing.Point(17, 23)
         Me.ButtonNewTripFile.Name = "ButtonNewTripFile"
-        Me.ButtonNewTripFile.Size = New System.Drawing.Size(136, 43)
+        Me.ButtonNewTripFile.Size = New System.Drawing.Size(146, 43)
         Me.ButtonNewTripFile.TabIndex = 6
         Me.ButtonNewTripFile.Text = "Create New Trip"
         Me.ButtonNewTripFile.UseVisualStyleBackColor = True
@@ -428,108 +455,6 @@ Partial Class FormMain
         Me.ButtonOpenTrip.Text = "Open Existing Trip"
         Me.ButtonOpenTrip.UseVisualStyleBackColor = True
         '
-        'TabPage7
-        '
-        Me.TabPage7.Controls.Add(Me.Panel7)
-        Me.TabPage7.Controls.Add(Me.Panel8)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(724, 485)
-        Me.TabPage7.TabIndex = 6
-        Me.TabPage7.Text = "Logsheet Comments"
-        Me.TabPage7.UseVisualStyleBackColor = True
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel7.Controls.Add(Me.Label25)
-        Me.Panel7.Controls.Add(Me.DateTimePickerTripStartDateComments)
-        Me.Panel7.Controls.Add(Me.ButtonNewComments)
-        Me.Panel7.Location = New System.Drawing.Point(24, 28)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(678, 94)
-        Me.Panel7.TabIndex = 12
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(200, 19)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(92, 16)
-        Me.Label25.TabIndex = 8
-        Me.Label25.Text = "Trip Start Date"
-        '
-        'DateTimePickerTripStartDateComments
-        '
-        Me.DateTimePickerTripStartDateComments.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.eTunaLog.My.MySettings.Default, "DateTrip", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.DateTimePickerTripStartDateComments.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePickerTripStartDateComments.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePickerTripStartDateComments.Location = New System.Drawing.Point(198, 38)
-        Me.DateTimePickerTripStartDateComments.MaxDate = New Date(2099, 12, 31, 0, 0, 0, 0)
-        Me.DateTimePickerTripStartDateComments.MinDate = New Date(2010, 1, 1, 0, 0, 0, 0)
-        Me.DateTimePickerTripStartDateComments.Name = "DateTimePickerTripStartDateComments"
-        Me.DateTimePickerTripStartDateComments.Size = New System.Drawing.Size(106, 22)
-        Me.DateTimePickerTripStartDateComments.TabIndex = 7
-        Me.DateTimePickerTripStartDateComments.Value = Global.eTunaLog.My.MySettings.Default.DateTrip
-        '
-        'ButtonNewComments
-        '
-        Me.ButtonNewComments.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonNewComments.Location = New System.Drawing.Point(17, 31)
-        Me.ButtonNewComments.Name = "ButtonNewComments"
-        Me.ButtonNewComments.Size = New System.Drawing.Size(164, 29)
-        Me.ButtonNewComments.TabIndex = 6
-        Me.ButtonNewComments.Text = "Create New Comments"
-        Me.ButtonNewComments.UseVisualStyleBackColor = True
-        '
-        'Panel8
-        '
-        Me.Panel8.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel8.Controls.Add(Me.ButtonDeleteComments)
-        Me.Panel8.Controls.Add(Me.ListBoxComments)
-        Me.Panel8.Controls.Add(Me.ButtonOpenComments)
-        Me.Panel8.Location = New System.Drawing.Point(24, 147)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(678, 315)
-        Me.Panel8.TabIndex = 11
-        '
-        'ButtonDeleteComments
-        '
-        Me.ButtonDeleteComments.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonDeleteComments.ForeColor = System.Drawing.Color.Red
-        Me.ButtonDeleteComments.Location = New System.Drawing.Point(17, 69)
-        Me.ButtonDeleteComments.Name = "ButtonDeleteComments"
-        Me.ButtonDeleteComments.Size = New System.Drawing.Size(136, 29)
-        Me.ButtonDeleteComments.TabIndex = 10
-        Me.ButtonDeleteComments.Text = "Delete"
-        Me.ButtonDeleteComments.UseVisualStyleBackColor = True
-        '
-        'ListBoxComments
-        '
-        Me.ListBoxComments.BackColor = System.Drawing.SystemColors.Window
-        Me.ListBoxComments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ListBoxComments.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBoxComments.FormattingEnabled = True
-        Me.ListBoxComments.ItemHeight = 16
-        Me.ListBoxComments.Location = New System.Drawing.Point(186, 20)
-        Me.ListBoxComments.Name = "ListBoxComments"
-        Me.ListBoxComments.Size = New System.Drawing.Size(465, 274)
-        Me.ListBoxComments.TabIndex = 8
-        '
-        'ButtonOpenComments
-        '
-        Me.ButtonOpenComments.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonOpenComments.Location = New System.Drawing.Point(17, 24)
-        Me.ButtonOpenComments.Name = "ButtonOpenComments"
-        Me.ButtonOpenComments.Size = New System.Drawing.Size(136, 29)
-        Me.ButtonOpenComments.TabIndex = 9
-        Me.ButtonOpenComments.Text = "Open Comments"
-        Me.ButtonOpenComments.UseVisualStyleBackColor = True
-        '
         'TabPage6
         '
         Me.TabPage6.Controls.Add(Me.Panel5)
@@ -580,9 +505,9 @@ Partial Class FormMain
         'ButtonNewFAD
         '
         Me.ButtonNewFAD.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonNewFAD.Location = New System.Drawing.Point(17, 31)
+        Me.ButtonNewFAD.Location = New System.Drawing.Point(17, 25)
         Me.ButtonNewFAD.Name = "ButtonNewFAD"
-        Me.ButtonNewFAD.Size = New System.Drawing.Size(136, 29)
+        Me.ButtonNewFAD.Size = New System.Drawing.Size(151, 43)
         Me.ButtonNewFAD.TabIndex = 6
         Me.ButtonNewFAD.Text = "Create FAD record"
         Me.ButtonNewFAD.UseVisualStyleBackColor = True
@@ -645,168 +570,82 @@ Partial Class FormMain
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.GroupBox6)
-        Me.TabPage2.Controls.Add(Me.GroupBox1)
+        Me.TabPage2.Controls.Add(Me.Parameters)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(724, 485)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Application Parameters"
+        Me.TabPage2.Text = "Parameters / Options"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'GroupBox6
+        'Parameters
         '
-        Me.GroupBox6.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox6.Controls.Add(Me.LogLLEdit)
-        Me.GroupBox6.Controls.Add(Me.Label23)
-        Me.GroupBox6.Controls.Add(Me.ComboBoxLLTemplate)
-        Me.GroupBox6.Controls.Add(Me.FadEdit)
-        Me.GroupBox6.Controls.Add(Me.LogEdit)
-        Me.GroupBox6.Controls.Add(Me.Label24)
-        Me.GroupBox6.Controls.Add(Me.ComboBoxFADTemplate)
-        Me.GroupBox6.Controls.Add(Me.Label19)
-        Me.GroupBox6.Controls.Add(Me.ComboBoxTemplate)
-        Me.GroupBox6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox6.Location = New System.Drawing.Point(25, 310)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(666, 147)
-        Me.GroupBox6.TabIndex = 9
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Smart PDF templates"
+        Me.Parameters.Controls.Add(Me.TabVessels)
+        Me.Parameters.Controls.Add(Me.TabTemplates)
+        Me.Parameters.Controls.Add(Me.TabOptions)
+        Me.Parameters.Location = New System.Drawing.Point(16, 16)
+        Me.Parameters.Name = "Parameters"
+        Me.Parameters.SelectedIndex = 0
+        Me.Parameters.Size = New System.Drawing.Size(701, 461)
+        Me.Parameters.TabIndex = 10
         '
-        'LogLLEdit
+        'TabVessels
         '
-        Me.LogLLEdit.Location = New System.Drawing.Point(599, 68)
-        Me.LogLLEdit.Name = "LogLLEdit"
-        Me.LogLLEdit.Size = New System.Drawing.Size(43, 23)
-        Me.LogLLEdit.TabIndex = 19
-        Me.LogLLEdit.Text = "Edit"
-        Me.LogLLEdit.UseVisualStyleBackColor = True
+        Me.TabVessels.Controls.Add(Me.GroupBoxVessel)
+        Me.TabVessels.Location = New System.Drawing.Point(4, 25)
+        Me.TabVessels.Name = "TabVessels"
+        Me.TabVessels.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabVessels.Size = New System.Drawing.Size(693, 432)
+        Me.TabVessels.TabIndex = 0
+        Me.TabVessels.Text = "Vessel Details"
+        Me.TabVessels.UseVisualStyleBackColor = True
         '
-        'Label23
+        'GroupBoxVessel
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(17, 71)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(179, 16)
-        Me.Label23.TabIndex = 17
-        Me.Label23.Text = "LONGLINE logsheet template"
+        Me.GroupBoxVessel.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBoxVessel.Controls.Add(Me.GroupBoxGear)
+        Me.GroupBoxVessel.Controls.Add(Me.LabelCompuls)
+        Me.GroupBoxVessel.Controls.Add(Me.LabelEmail)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxCompanyEmail)
+        Me.GroupBoxVessel.Controls.Add(Me.Label9)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxIRC)
+        Me.GroupBoxVessel.Controls.Add(Me.Label10)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxRegistrationNo)
+        Me.GroupBoxVessel.Controls.Add(Me.Label8)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxWCPFCID)
+        Me.GroupBoxVessel.Controls.Add(Me.LabelCountry)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxCountry)
+        Me.GroupBoxVessel.Controls.Add(Me.Label6)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxAgent)
+        Me.GroupBoxVessel.Controls.Add(Me.LabelCompany)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxCompany)
+        Me.GroupBoxVessel.Controls.Add(Me.Label4)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxPermit)
+        Me.GroupBoxVessel.Controls.Add(Me.LabelCapt)
+        Me.GroupBoxVessel.Controls.Add(Me.Label2)
+        Me.GroupBoxVessel.Controls.Add(Me.LabelVesselName)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxCaptain)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxFFAVID)
+        Me.GroupBoxVessel.Controls.Add(Me.TextBoxVesselname)
+        Me.GroupBoxVessel.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxVessel.Location = New System.Drawing.Point(11, 14)
+        Me.GroupBoxVessel.Name = "GroupBoxVessel"
+        Me.GroupBoxVessel.Size = New System.Drawing.Size(667, 270)
+        Me.GroupBoxVessel.TabIndex = 9
+        Me.GroupBoxVessel.TabStop = False
+        Me.GroupBoxVessel.Text = "Vessel parameters"
         '
-        'ComboBoxLLTemplate
+        'GroupBoxGear
         '
-        Me.ComboBoxLLTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "LLTemplate", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.ComboBoxLLTemplate.FormattingEnabled = True
-        Me.ComboBoxLLTemplate.Location = New System.Drawing.Point(233, 68)
-        Me.ComboBoxLLTemplate.Name = "ComboBoxLLTemplate"
-        Me.ComboBoxLLTemplate.Size = New System.Drawing.Size(358, 24)
-        Me.ComboBoxLLTemplate.TabIndex = 18
-        Me.ComboBoxLLTemplate.Text = Global.eTunaLog.My.MySettings.Default.LLTemplate
-        '
-        'FadEdit
-        '
-        Me.FadEdit.Location = New System.Drawing.Point(599, 98)
-        Me.FadEdit.Name = "FadEdit"
-        Me.FadEdit.Size = New System.Drawing.Size(43, 23)
-        Me.FadEdit.TabIndex = 16
-        Me.FadEdit.Text = "Edit"
-        Me.FadEdit.UseVisualStyleBackColor = True
-        '
-        'LogEdit
-        '
-        Me.LogEdit.Location = New System.Drawing.Point(599, 38)
-        Me.LogEdit.Name = "LogEdit"
-        Me.LogEdit.Size = New System.Drawing.Size(43, 23)
-        Me.LogEdit.TabIndex = 15
-        Me.LogEdit.Text = "Edit"
-        Me.LogEdit.UseVisualStyleBackColor = True
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(17, 101)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(139, 16)
-        Me.Label24.TabIndex = 13
-        Me.Label24.Text = "FAD Records template"
-        '
-        'ComboBoxFADTemplate
-        '
-        Me.ComboBoxFADTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "FADTemplate", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.ComboBoxFADTemplate.FormattingEnabled = True
-        Me.ComboBoxFADTemplate.Location = New System.Drawing.Point(233, 98)
-        Me.ComboBoxFADTemplate.Name = "ComboBoxFADTemplate"
-        Me.ComboBoxFADTemplate.Size = New System.Drawing.Size(358, 24)
-        Me.ComboBoxFADTemplate.TabIndex = 14
-        Me.ComboBoxFADTemplate.Text = Global.eTunaLog.My.MySettings.Default.FADTemplate
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(17, 41)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(203, 16)
-        Me.Label19.TabIndex = 6
-        Me.Label19.Text = "PURSE SEINE logsheet template"
-        '
-        'ComboBoxTemplate
-        '
-        Me.ComboBoxTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "Template", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.ComboBoxTemplate.FormattingEnabled = True
-        Me.ComboBoxTemplate.Location = New System.Drawing.Point(233, 38)
-        Me.ComboBoxTemplate.Name = "ComboBoxTemplate"
-        Me.ComboBoxTemplate.Size = New System.Drawing.Size(358, 24)
-        Me.ComboBoxTemplate.TabIndex = 10
-        Me.ComboBoxTemplate.Text = Global.eTunaLog.My.MySettings.Default.Template
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Controls.Add(Me.Label26)
-        Me.GroupBox1.Controls.Add(Me.Label21)
-        Me.GroupBox1.Controls.Add(Me.TextBoxCompanyEmail)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.TextBoxIRC)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.TextBoxRegistrationNo)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.TextBoxWCPFCID)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.TextBoxCountry)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TextBoxAgent)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.TextBoxCompany)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBoxPermit)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBoxCaptain)
-        Me.GroupBox1.Controls.Add(Me.TextBoxFFAVID)
-        Me.GroupBox1.Controls.Add(Me.TextBoxVesselname)
-        Me.GroupBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(25, 20)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(667, 270)
-        Me.GroupBox1.TabIndex = 8
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Vessel parameters"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.RadioLongliner)
-        Me.GroupBox2.Controls.Add(Me.RadioSeiner)
-        Me.GroupBox2.Location = New System.Drawing.Point(327, 16)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(308, 54)
-        Me.GroupBox2.TabIndex = 26
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Vessel gear type"
+        Me.GroupBoxGear.Controls.Add(Me.RadioLongliner)
+        Me.GroupBoxGear.Controls.Add(Me.RadioSeiner)
+        Me.GroupBoxGear.Location = New System.Drawing.Point(327, 16)
+        Me.GroupBoxGear.Name = "GroupBoxGear"
+        Me.GroupBoxGear.Size = New System.Drawing.Size(308, 54)
+        Me.GroupBoxGear.TabIndex = 26
+        Me.GroupBoxGear.TabStop = False
+        Me.GroupBoxGear.Text = "Vessel gear type (*)"
         '
         'RadioLongliner
         '
@@ -834,26 +673,26 @@ Partial Class FormMain
         Me.RadioSeiner.Text = "Purse Seiner"
         Me.RadioSeiner.UseVisualStyleBackColor = True
         '
-        'Label26
+        'LabelCompuls
         '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(86, 239)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(317, 16)
-        Me.Label26.TabIndex = 22
-        Me.Label26.Text = "(*) Parameter is compulsory (used in file naming)"
+        Me.LabelCompuls.AutoSize = True
+        Me.LabelCompuls.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelCompuls.Location = New System.Drawing.Point(86, 239)
+        Me.LabelCompuls.Name = "LabelCompuls"
+        Me.LabelCompuls.Size = New System.Drawing.Size(317, 16)
+        Me.LabelCompuls.TabIndex = 22
+        Me.LabelCompuls.Text = "(*) Parameter is compulsory (used in file naming)"
         '
-        'Label21
+        'LabelEmail
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label21.Location = New System.Drawing.Point(324, 182)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(144, 16)
-        Me.Label21.TabIndex = 20
-        Me.Label21.Text = "Fishing Company email"
+        Me.LabelEmail.AutoSize = True
+        Me.LabelEmail.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LabelEmail.Location = New System.Drawing.Point(324, 182)
+        Me.LabelEmail.Name = "LabelEmail"
+        Me.LabelEmail.Size = New System.Drawing.Size(144, 16)
+        Me.LabelEmail.TabIndex = 20
+        Me.LabelEmail.Text = "Fishing Company email"
         '
         'TextBoxCompanyEmail
         '
@@ -924,16 +763,16 @@ Partial Class FormMain
         Me.TextBoxWCPFCID.TabIndex = 6
         Me.TextBoxWCPFCID.Text = Global.eTunaLog.My.MySettings.Default.WCPFCID
         '
-        'Label7
+        'LabelCountry
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label7.Location = New System.Drawing.Point(16, 132)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(126, 16)
-        Me.Label7.TabIndex = 13
-        Me.Label7.Text = "Country Registration"
+        Me.LabelCountry.AutoSize = True
+        Me.LabelCountry.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelCountry.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LabelCountry.Location = New System.Drawing.Point(16, 132)
+        Me.LabelCountry.Name = "LabelCountry"
+        Me.LabelCountry.Size = New System.Drawing.Size(126, 16)
+        Me.LabelCountry.TabIndex = 13
+        Me.LabelCountry.Text = "Country Registration"
         '
         'TextBoxCountry
         '
@@ -964,16 +803,16 @@ Partial Class FormMain
         Me.TextBoxAgent.TabIndex = 4
         Me.TextBoxAgent.Text = Global.eTunaLog.My.MySettings.Default.Agent
         '
-        'Label5
+        'LabelCompany
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label5.Location = New System.Drawing.Point(17, 80)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(109, 16)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Fishing Company"
+        Me.LabelCompany.AutoSize = True
+        Me.LabelCompany.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelCompany.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LabelCompany.Location = New System.Drawing.Point(17, 80)
+        Me.LabelCompany.Name = "LabelCompany"
+        Me.LabelCompany.Size = New System.Drawing.Size(109, 16)
+        Me.LabelCompany.TabIndex = 9
+        Me.LabelCompany.Text = "Fishing Company"
         '
         'TextBoxCompany
         '
@@ -1004,16 +843,16 @@ Partial Class FormMain
         Me.TextBoxPermit.TabIndex = 1
         Me.TextBoxPermit.Text = Global.eTunaLog.My.MySettings.Default.Permit
         '
-        'Label3
+        'LabelCapt
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label3.Location = New System.Drawing.Point(324, 131)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 16)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Captain's name"
+        Me.LabelCapt.AutoSize = True
+        Me.LabelCapt.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelCapt.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LabelCapt.Location = New System.Drawing.Point(324, 131)
+        Me.LabelCapt.Name = "LabelCapt"
+        Me.LabelCapt.Size = New System.Drawing.Size(97, 16)
+        Me.LabelCapt.TabIndex = 5
+        Me.LabelCapt.Text = "Captain's name"
         '
         'Label2
         '
@@ -1025,15 +864,15 @@ Partial Class FormMain
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "FFA VID (*)"
         '
-        'Label1
+        'LabelVesselName
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 29)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 16)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Vessel name(*)"
+        Me.LabelVesselName.AutoSize = True
+        Me.LabelVesselName.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelVesselName.Location = New System.Drawing.Point(17, 29)
+        Me.LabelVesselName.Name = "LabelVesselName"
+        Me.LabelVesselName.Size = New System.Drawing.Size(101, 16)
+        Me.LabelVesselName.TabIndex = 3
+        Me.LabelVesselName.Text = "Vessel name(*)"
         '
         'TextBoxCaptain
         '
@@ -1061,6 +900,211 @@ Partial Class FormMain
         Me.TextBoxVesselname.Size = New System.Drawing.Size(290, 22)
         Me.TextBoxVesselname.TabIndex = 0
         Me.TextBoxVesselname.Text = Global.eTunaLog.My.MySettings.Default.Vesselname
+        '
+        'TabTemplates
+        '
+        Me.TabTemplates.Controls.Add(Me.GroupBoxTemplates)
+        Me.TabTemplates.Location = New System.Drawing.Point(4, 25)
+        Me.TabTemplates.Name = "TabTemplates"
+        Me.TabTemplates.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabTemplates.Size = New System.Drawing.Size(693, 432)
+        Me.TabTemplates.TabIndex = 1
+        Me.TabTemplates.Text = "PDF Templates"
+        Me.TabTemplates.UseVisualStyleBackColor = True
+        '
+        'GroupBoxTemplates
+        '
+        Me.GroupBoxTemplates.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBoxTemplates.Controls.Add(Me.LogLLEdit)
+        Me.GroupBoxTemplates.Controls.Add(Me.LabelLL)
+        Me.GroupBoxTemplates.Controls.Add(Me.ComboBoxLLTemplate)
+        Me.GroupBoxTemplates.Controls.Add(Me.FadEdit)
+        Me.GroupBoxTemplates.Controls.Add(Me.LogEdit)
+        Me.GroupBoxTemplates.Controls.Add(Me.LabelFAD)
+        Me.GroupBoxTemplates.Controls.Add(Me.ComboBoxFADTemplate)
+        Me.GroupBoxTemplates.Controls.Add(Me.LabelPS)
+        Me.GroupBoxTemplates.Controls.Add(Me.ComboBoxTemplate)
+        Me.GroupBoxTemplates.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxTemplates.Location = New System.Drawing.Point(11, 16)
+        Me.GroupBoxTemplates.Name = "GroupBoxTemplates"
+        Me.GroupBoxTemplates.Size = New System.Drawing.Size(666, 147)
+        Me.GroupBoxTemplates.TabIndex = 10
+        Me.GroupBoxTemplates.TabStop = False
+        Me.GroupBoxTemplates.Text = "Smart PDF templates"
+        '
+        'LogLLEdit
+        '
+        Me.LogLLEdit.Location = New System.Drawing.Point(599, 68)
+        Me.LogLLEdit.Name = "LogLLEdit"
+        Me.LogLLEdit.Size = New System.Drawing.Size(43, 23)
+        Me.LogLLEdit.TabIndex = 19
+        Me.LogLLEdit.Text = "Edit"
+        Me.LogLLEdit.UseVisualStyleBackColor = True
+        '
+        'LabelLL
+        '
+        Me.LabelLL.AutoSize = True
+        Me.LabelLL.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelLL.Location = New System.Drawing.Point(17, 71)
+        Me.LabelLL.Name = "LabelLL"
+        Me.LabelLL.Size = New System.Drawing.Size(179, 16)
+        Me.LabelLL.TabIndex = 17
+        Me.LabelLL.Text = "LONGLINE logsheet template"
+        '
+        'ComboBoxLLTemplate
+        '
+        Me.ComboBoxLLTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "LLTemplate", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.ComboBoxLLTemplate.FormattingEnabled = True
+        Me.ComboBoxLLTemplate.Location = New System.Drawing.Point(233, 68)
+        Me.ComboBoxLLTemplate.Name = "ComboBoxLLTemplate"
+        Me.ComboBoxLLTemplate.Size = New System.Drawing.Size(358, 24)
+        Me.ComboBoxLLTemplate.TabIndex = 18
+        Me.ComboBoxLLTemplate.Text = Global.eTunaLog.My.MySettings.Default.LLTemplate
+        '
+        'FadEdit
+        '
+        Me.FadEdit.Location = New System.Drawing.Point(599, 98)
+        Me.FadEdit.Name = "FadEdit"
+        Me.FadEdit.Size = New System.Drawing.Size(43, 23)
+        Me.FadEdit.TabIndex = 16
+        Me.FadEdit.Text = "Edit"
+        Me.FadEdit.UseVisualStyleBackColor = True
+        '
+        'LogEdit
+        '
+        Me.LogEdit.Location = New System.Drawing.Point(599, 38)
+        Me.LogEdit.Name = "LogEdit"
+        Me.LogEdit.Size = New System.Drawing.Size(43, 23)
+        Me.LogEdit.TabIndex = 15
+        Me.LogEdit.Text = "Edit"
+        Me.LogEdit.UseVisualStyleBackColor = True
+        '
+        'LabelFAD
+        '
+        Me.LabelFAD.AutoSize = True
+        Me.LabelFAD.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFAD.Location = New System.Drawing.Point(17, 101)
+        Me.LabelFAD.Name = "LabelFAD"
+        Me.LabelFAD.Size = New System.Drawing.Size(139, 16)
+        Me.LabelFAD.TabIndex = 13
+        Me.LabelFAD.Text = "FAD Records template"
+        '
+        'ComboBoxFADTemplate
+        '
+        Me.ComboBoxFADTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "FADTemplate", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.ComboBoxFADTemplate.FormattingEnabled = True
+        Me.ComboBoxFADTemplate.Location = New System.Drawing.Point(233, 98)
+        Me.ComboBoxFADTemplate.Name = "ComboBoxFADTemplate"
+        Me.ComboBoxFADTemplate.Size = New System.Drawing.Size(358, 24)
+        Me.ComboBoxFADTemplate.TabIndex = 14
+        Me.ComboBoxFADTemplate.Text = Global.eTunaLog.My.MySettings.Default.FADTemplate
+        '
+        'LabelPS
+        '
+        Me.LabelPS.AutoSize = True
+        Me.LabelPS.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPS.Location = New System.Drawing.Point(17, 41)
+        Me.LabelPS.Name = "LabelPS"
+        Me.LabelPS.Size = New System.Drawing.Size(203, 16)
+        Me.LabelPS.TabIndex = 6
+        Me.LabelPS.Text = "PURSE SEINE logsheet template"
+        '
+        'ComboBoxTemplate
+        '
+        Me.ComboBoxTemplate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.eTunaLog.My.MySettings.Default, "Template", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.ComboBoxTemplate.FormattingEnabled = True
+        Me.ComboBoxTemplate.Location = New System.Drawing.Point(233, 38)
+        Me.ComboBoxTemplate.Name = "ComboBoxTemplate"
+        Me.ComboBoxTemplate.Size = New System.Drawing.Size(358, 24)
+        Me.ComboBoxTemplate.TabIndex = 10
+        Me.ComboBoxTemplate.Text = Global.eTunaLog.My.MySettings.Default.Template
+        '
+        'TabOptions
+        '
+        Me.TabOptions.Controls.Add(Me.GroupLanguage)
+        Me.TabOptions.Controls.Add(Me.GroupShow)
+        Me.TabOptions.Location = New System.Drawing.Point(4, 25)
+        Me.TabOptions.Name = "TabOptions"
+        Me.TabOptions.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabOptions.Size = New System.Drawing.Size(693, 432)
+        Me.TabOptions.TabIndex = 2
+        Me.TabOptions.Text = "Options"
+        Me.TabOptions.UseVisualStyleBackColor = True
+        '
+        'GroupLanguage
+        '
+        Me.GroupLanguage.Controls.Add(Me.RadioFrench)
+        Me.GroupLanguage.Controls.Add(Me.RadioEnglish)
+        Me.GroupLanguage.Location = New System.Drawing.Point(233, 22)
+        Me.GroupLanguage.Name = "GroupLanguage"
+        Me.GroupLanguage.Size = New System.Drawing.Size(194, 90)
+        Me.GroupLanguage.TabIndex = 27
+        Me.GroupLanguage.TabStop = False
+        Me.GroupLanguage.Text = "Language"
+        '
+        'RadioFrench
+        '
+        Me.RadioFrench.AutoSize = True
+        Me.RadioFrench.Checked = Global.eTunaLog.My.MySettings.Default.LanguageFR
+        Me.RadioFrench.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.eTunaLog.My.MySettings.Default, "LanguageFR", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.RadioFrench.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioFrench.Location = New System.Drawing.Point(21, 51)
+        Me.RadioFrench.Name = "RadioFrench"
+        Me.RadioFrench.Size = New System.Drawing.Size(76, 20)
+        Me.RadioFrench.TabIndex = 25
+        Me.RadioFrench.Text = "Français"
+        Me.RadioFrench.UseVisualStyleBackColor = True
+        '
+        'RadioEnglish
+        '
+        Me.RadioEnglish.AutoSize = True
+        Me.RadioEnglish.Checked = Global.eTunaLog.My.MySettings.Default.LanguageEN
+        Me.RadioEnglish.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.eTunaLog.My.MySettings.Default, "LanguageEN", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.RadioEnglish.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioEnglish.Location = New System.Drawing.Point(21, 24)
+        Me.RadioEnglish.Name = "RadioEnglish"
+        Me.RadioEnglish.Size = New System.Drawing.Size(69, 20)
+        Me.RadioEnglish.TabIndex = 23
+        Me.RadioEnglish.TabStop = True
+        Me.RadioEnglish.Text = "English"
+        Me.RadioEnglish.UseVisualStyleBackColor = True
+        '
+        'GroupShow
+        '
+        Me.GroupShow.Controls.Add(Me.CheckShowFAD)
+        Me.GroupShow.Controls.Add(Me.CheckShowLogsheet)
+        Me.GroupShow.Location = New System.Drawing.Point(16, 22)
+        Me.GroupShow.Name = "GroupShow"
+        Me.GroupShow.Size = New System.Drawing.Size(186, 90)
+        Me.GroupShow.TabIndex = 2
+        Me.GroupShow.TabStop = False
+        Me.GroupShow.Text = "Show"
+        '
+        'CheckShowFAD
+        '
+        Me.CheckShowFAD.AutoSize = True
+        Me.CheckShowFAD.Checked = Global.eTunaLog.My.MySettings.Default.ViewFAD
+        Me.CheckShowFAD.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckShowFAD.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.eTunaLog.My.MySettings.Default, "ViewFAD", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.CheckShowFAD.Location = New System.Drawing.Point(15, 52)
+        Me.CheckShowFAD.Name = "CheckShowFAD"
+        Me.CheckShowFAD.Size = New System.Drawing.Size(52, 20)
+        Me.CheckShowFAD.TabIndex = 1
+        Me.CheckShowFAD.Text = "FAD"
+        Me.CheckShowFAD.UseVisualStyleBackColor = True
+        '
+        'CheckShowLogsheet
+        '
+        Me.CheckShowLogsheet.AutoSize = True
+        Me.CheckShowLogsheet.Checked = Global.eTunaLog.My.MySettings.Default.ViewLogsheet
+        Me.CheckShowLogsheet.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckShowLogsheet.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.eTunaLog.My.MySettings.Default, "ViewLogsheet", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.CheckShowLogsheet.Location = New System.Drawing.Point(15, 26)
+        Me.CheckShowLogsheet.Name = "CheckShowLogsheet"
+        Me.CheckShowLogsheet.Size = New System.Drawing.Size(80, 20)
+        Me.CheckShowLogsheet.TabIndex = 0
+        Me.CheckShowLogsheet.Text = "Logsheet"
+        Me.CheckShowLogsheet.UseVisualStyleBackColor = True
         '
         'TabPage4
         '
@@ -1251,22 +1295,26 @@ Partial Class FormMain
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.TabPage7.ResumeLayout(False)
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
-        Me.Panel8.ResumeLayout(False)
         Me.TabPage6.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.Parameters.ResumeLayout(False)
+        Me.TabVessels.ResumeLayout(False)
+        Me.GroupBoxVessel.ResumeLayout(False)
+        Me.GroupBoxVessel.PerformLayout()
+        Me.GroupBoxGear.ResumeLayout(False)
+        Me.GroupBoxGear.PerformLayout()
+        Me.TabTemplates.ResumeLayout(False)
+        Me.GroupBoxTemplates.ResumeLayout(False)
+        Me.GroupBoxTemplates.PerformLayout()
+        Me.TabOptions.ResumeLayout(False)
+        Me.GroupLanguage.ResumeLayout(False)
+        Me.GroupLanguage.PerformLayout()
+        Me.GroupShow.ResumeLayout(False)
+        Me.GroupShow.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -1278,35 +1326,11 @@ Partial Class FormMain
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents TextBoxPermit As System.Windows.Forms.TextBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxCaptain As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxFFAVID As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxVesselname As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxCompany As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxIRC As System.Windows.Forms.TextBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxRegistrationNo As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxWCPFCID As System.Windows.Forms.TextBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxCountry As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxAgent As System.Windows.Forms.TextBox
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
-    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents ComboBoxTemplate As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents LabelTitle As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents LinkLabelManu As System.Windows.Forms.LinkLabel
@@ -1316,7 +1340,7 @@ Partial Class FormMain
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents LabelTripStart As System.Windows.Forms.Label
     Friend WithEvents DateTimePickerTripStartDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents ButtonNewTripFile As System.Windows.Forms.Button
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
@@ -1330,8 +1354,6 @@ Partial Class FormMain
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents ButtonSendEmail As System.Windows.Forms.Button
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxCompanyEmail As System.Windows.Forms.TextBox
     Friend WithEvents LabelWait As System.Windows.Forms.Label
     Friend WithEvents ButtonManual As System.Windows.Forms.Button
     Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
@@ -1348,28 +1370,57 @@ Partial Class FormMain
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents ComboBoxFADTemplate As System.Windows.Forms.ComboBox
-    Friend WithEvents TabPage7 As System.Windows.Forms.TabPage
-    Friend WithEvents Panel7 As System.Windows.Forms.Panel
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePickerTripStartDateComments As System.Windows.Forms.DateTimePicker
-    Friend WithEvents ButtonNewComments As System.Windows.Forms.Button
-    Friend WithEvents Panel8 As System.Windows.Forms.Panel
-    Friend WithEvents ButtonDeleteComments As System.Windows.Forms.Button
-    Friend WithEvents ListBoxComments As System.Windows.Forms.ListBox
-    Friend WithEvents ButtonOpenComments As System.Windows.Forms.Button
     Friend WithEvents ButtonVersion As System.Windows.Forms.Button
-    Friend WithEvents LogEdit As System.Windows.Forms.Button
-    Friend WithEvents FadEdit As System.Windows.Forms.Button
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents RadioSeiner As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioLongliner As System.Windows.Forms.RadioButton
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents LogLLEdit As System.Windows.Forms.Button
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents ComboBoxLLTemplate As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents ButtonHelp As System.Windows.Forms.Button
+    Friend WithEvents LabelTripNumber As System.Windows.Forms.Label
+    Friend WithEvents TripNumber As System.Windows.Forms.TextBox
+    Friend WithEvents Parameters As System.Windows.Forms.TabControl
+    Friend WithEvents TabVessels As System.Windows.Forms.TabPage
+    Friend WithEvents TabTemplates As System.Windows.Forms.TabPage
+    Friend WithEvents GroupBoxVessel As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBoxGear As System.Windows.Forms.GroupBox
+    Friend WithEvents RadioLongliner As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioSeiner As System.Windows.Forms.RadioButton
+    Friend WithEvents LabelCompuls As System.Windows.Forms.Label
+    Friend WithEvents LabelEmail As System.Windows.Forms.Label
+    Friend WithEvents TextBoxCompanyEmail As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxIRC As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxRegistrationNo As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxWCPFCID As System.Windows.Forms.TextBox
+    Friend WithEvents LabelCountry As System.Windows.Forms.Label
+    Friend WithEvents TextBoxCountry As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxAgent As System.Windows.Forms.TextBox
+    Friend WithEvents LabelCompany As System.Windows.Forms.Label
+    Friend WithEvents TextBoxCompany As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxPermit As System.Windows.Forms.TextBox
+    Friend WithEvents LabelCapt As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents LabelVesselName As System.Windows.Forms.Label
+    Friend WithEvents TextBoxCaptain As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxFFAVID As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxVesselname As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBoxTemplates As System.Windows.Forms.GroupBox
+    Friend WithEvents LogLLEdit As System.Windows.Forms.Button
+    Friend WithEvents LabelLL As System.Windows.Forms.Label
+    Friend WithEvents ComboBoxLLTemplate As System.Windows.Forms.ComboBox
+    Friend WithEvents FadEdit As System.Windows.Forms.Button
+    Friend WithEvents LogEdit As System.Windows.Forms.Button
+    Friend WithEvents LabelFAD As System.Windows.Forms.Label
+    Friend WithEvents ComboBoxFADTemplate As System.Windows.Forms.ComboBox
+    Friend WithEvents LabelPS As System.Windows.Forms.Label
+    Friend WithEvents ComboBoxTemplate As System.Windows.Forms.ComboBox
+    Friend WithEvents TabOptions As System.Windows.Forms.TabPage
+    Friend WithEvents GroupShow As System.Windows.Forms.GroupBox
+    Friend WithEvents CheckShowFAD As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckShowLogsheet As System.Windows.Forms.CheckBox
+    Friend WithEvents GroupLanguage As System.Windows.Forms.GroupBox
+    Friend WithEvents RadioFrench As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioEnglish As System.Windows.Forms.RadioButton
 
 End Class
